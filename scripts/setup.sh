@@ -10,13 +10,15 @@ if command -v psql &> /dev/null; then
         echo "✔ redis"
         echo
 
+        echo "project name: "
+        read project
 
         while true; do
             echo "Do you want to create database? (Y/N): "
             read answer
 
             if [[ "$answer" == "y" ]]; then
-                echo "Enter database name: "
+                echo "database name: "
                 read database
                 createdb "$database"
                 echo "✔ database"
@@ -39,7 +41,13 @@ if command -v psql &> /dev/null; then
         rm .env.template
         npm install
 
-        echo "setup completed successfully!"
+        cd ../
+        rm -rf .git
+        git init
+        git add .
+        git commit -m "inital commit!"
+
+        echo "✔ setup completed successfully!"
     else
         echo "redis is not installed, please install it before proceeding."
     fi
