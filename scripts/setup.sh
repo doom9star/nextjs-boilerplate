@@ -7,16 +7,13 @@ if command -v psql &> /dev/null; then
         echo "✔ redis"
         echo
 
-        echo "project name: "
-        read project
+        read -p "project name: " project
 
         while true; do
-            echo "Do you want to create database? (Y/N): "
-            read answer
+            read -p "Do you want to create database? (Y/N): " answer
 
             if [[ "$answer" == "y" ]]; then
-                echo "database name: "
-                read database
+                read -p "database name: " database
                 createdb "$database"
                 echo "✔ database"
                 break
