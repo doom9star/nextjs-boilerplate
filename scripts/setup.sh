@@ -9,21 +9,9 @@ if command -v psql &> /dev/null; then
 
         read -p "project name: " project
 
-        while true; do
-            read -p "Do you want to create database? (Y/N): " answer
-
-            if [[ "$answer" == "Y" ]]; then
-                read -p "database name: " database
-                createdb "$database"
-                echo "✔ database"
-                break
-            elif [[ "$answer" == "N" ]]; then
-                echo "✔ database"
-                break
-            else
-                echo "Please enter 'Y' or 'N'."
-            fi
-        done
+        read -p "database name: " database
+        createdb "$database"
+        echo "✔ database"
 
         cd zeus 
         cp -f .env.template .env
@@ -41,6 +29,7 @@ if command -v psql &> /dev/null; then
         git add .
         git commit -m "inital commit!"
 
+        echo
         echo "✔ setup completed successfully!"
     else
         echo "redis is not installed, please install it before proceeding."

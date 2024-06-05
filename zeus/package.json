@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "gen": "prisma generate",
-    "sync": "prisma db push && npm run generate",
+    "sync": "prisma db push && npm run gen",
     "studio": "prisma studio --browser=none"
   },
   "dependencies": {
