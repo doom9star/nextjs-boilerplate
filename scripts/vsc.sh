@@ -14,5 +14,5 @@ then
     npm run dev
 elif [ $1 == "postgres" ]
 then
-    PGPASSWORD='karthik' psql -h localhost -U karthik -d postgres
+    PGPASSWORD='[password]' psql -h localhost -U '[user]' -d '[database]'
 fi
