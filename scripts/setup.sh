@@ -1,8 +1,5 @@
 #!/bin/bash
 
-chmod +x ./scripts/vsc.sh
-chmod +x ./scripts/migrate.sh
-
 if command -v psql &> /dev/null; then
     echo "✔ postgreSQL"
 
