@@ -4,6 +4,7 @@
 
 - git clone https://github.com/doom9star/nextjs-boilerplate.git
 - ./scripts/setup.sh
+- **scripts/vsc.sh** (replace [user], [password], [database])
 - **zeus/.env.development** (replace [user], [password], [database])
 - **zeus/.env** (fill)
 - **apollo/.env.development** (replace [user], [password], [database])
