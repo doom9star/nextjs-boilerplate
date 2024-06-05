@@ -1,0 +1,50 @@
+{
+  "name": "zeus",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "gen": "prisma generate",
+    "sync": "prisma db push && npm run generate",
+    "studio": "prisma studio --browser=none"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.15.0",
+    "@tanstack/react-query": "^5.40.1",
+    "@trpc/client": "^11.0.0-rc.390",
+    "@trpc/next": "^11.0.0-rc.390",
+    "@trpc/react-query": "^11.0.0-rc.390",
+    "@trpc/server": "^11.0.0-rc.390",
+    "antd": "^5.18.0",
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^2.2.0",
+    "cookies-next": "^4.2.1",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "nanoid": "^5.0.7",
+    "next": "14.2.3",
+    "nodemailer": "^6.9.13",
+    "prisma": "^5.15.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "socket.io-client": "^4.7.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

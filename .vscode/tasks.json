@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "zeus:server",
+      "type": "process",
+      "command": "./scripts/vsc.sh",
+      "args": ["zeus:server"],
+      "group": "test",
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "zeus:studio",
+      "type": "process",
+      "command": "./scripts/vsc.sh",
+      "args": ["zeus:studio"],
+      "group": "test",
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "apollo:server",
+      "type": "process",
+      "command": "./scripts/vsc.sh",
+      "args": ["apollo:server"],
+      "group": "test",
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "postgres",
+      "type": "process",
+      "command": "./scripts/vsc.sh",
+      "args": ["postgres"],
+      "group": "test",
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "setup",
+      "group": "test",
+      "dependsOn": ["zeus:server", "apollo:server", "zeus:studio", "postgres"],
+      "dependsOrder": "parallel"
+    }
+  ]
+}
