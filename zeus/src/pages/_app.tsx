@@ -1,6 +1,7 @@
 import Main from "@/components/Main";
 import CtxProvider from "@/context";
 import { COLOR } from "@/library/constants";
+import { trpc } from "@/library/trpc";
 import "@/styles/globals.css";
 import { ConfigProvider } from "antd";
 import type { AppProps } from "next/app";
@@ -12,7 +13,7 @@ const theme = {
   },
 };
 
-export default function App(props: AppProps) {
+function App(props: AppProps) {
   return (
     <ConfigProvider theme={theme}>
       <Head>
@@ -25,3 +26,5 @@ export default function App(props: AppProps) {
     </ConfigProvider>
   );
 }
+
+export default trpc.withTRPC(App);
