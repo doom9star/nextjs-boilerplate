@@ -30,6 +30,8 @@ if command -v psql &> /dev/null; then
         git commit -m "inital commit!"
 
         echo
+        echo "✔ modules installed successfully!"
+        echo "✔ repository initialized successfully!"
         echo "✔ setup completed successfully!"
     else
         echo "redis is not installed, please install it before proceeding."

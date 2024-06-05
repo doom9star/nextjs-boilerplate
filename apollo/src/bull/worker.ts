@@ -1,6 +1,5 @@
+import { BACKUP } from "@/bull/jobs";
 import { SandboxedJob } from "bullmq";
-import { sockets } from "../library/constants";
-import { BACKUP } from "./jobs";
 
 export default async function (job: SandboxedJob) {
   console.log(`[${new Date().toLocaleTimeString()}] ${job.name} is executing.`);

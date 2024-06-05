@@ -1,3 +1,4 @@
+import "module-alias/register";
 import { BACKUP } from "@/bull/jobs";
 import queue from "@/bull/queue";
 import { IOAuth } from "@/middleware/io";
