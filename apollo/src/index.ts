@@ -10,7 +10,6 @@ import { Server } from "socket.io";
 
 async function main() {
   dotenv.config({ path: "./.env" });
-  dotenv.config({ path: `./.env.${process.env.NODE_ENV}` });
 
   await queue.add(
     BACKUP,
