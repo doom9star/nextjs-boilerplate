@@ -12,12 +12,12 @@ if command -v psql &> /dev/null; then
         while true; do
             read -p "Do you want to create database? (Y/N): " answer
 
-            if [[ "$answer" == "y" ]]; then
+            if [[ "$answer" == "Y" ]]; then
                 read -p "database name: " database
                 createdb "$database"
                 echo "✔ database"
                 break
-            elif [[ "$answer" == "n" ]]; then
+            elif [[ "$answer" == "N" ]]; then
                 echo "✔ database"
                 break
             else
