@@ -7,8 +7,6 @@ if command -v psql &> /dev/null; then
         echo "✔ redis"
         echo
 
-        read -p "project name: " project
-
         read -p "database name: " database
         createdb "$database"
         echo "✔ database"
