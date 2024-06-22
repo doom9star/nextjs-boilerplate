@@ -56,6 +56,7 @@ if command -v psql &> /dev/null; then
         cd ../
         source scripts/migrate.sh
 
+        cd ../
         git add .
         git commit -m "inital commit!"
 
