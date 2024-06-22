@@ -14,7 +14,9 @@ if command -v psql &> /dev/null; then
 
         createdb "$database" 2>/dev/null
 
-        /bin/sed -e "s#\[user\]#$user#g" -e "s#\[password\]#$password#g" -e "s#\[database\]#$database#g" scripts/vsc.sh
+        /bin/sed -i "s#\[user\]#$user#g" scripts/vsc.sh
+        /bin/sed -i "s#\[password\]#$password#g" scripts/vsc.sh
+        /bin/sed -i "s#\[database\]#$database#g" scripts/vsc.sh
 
         echo
         echo "✔ database"
@@ -23,7 +25,9 @@ if command -v psql &> /dev/null; then
         cd zeus 
         cp -f .env.template .env
         rm .env.template
-        /bin/sed -e "s#\[user\]#$user#g" -e "s#\[password\]#$password#g" -e "s#\[database\]#$database#g" .env
+        /bin/sed -i "s#\[user\]#$user#g" .env
+        /bin/sed -i "s#\[password\]#$password#g" .env
+        /bin/sed -i "s#\[database\]#$database#g" .env
         npm install
         echo
         echo "✔ zeus modules installed successfully!"
@@ -32,7 +36,9 @@ if command -v psql &> /dev/null; then
         cd ../apollo
         cp -f .env.template .env
         rm .env.template
-        /bin/sed -e "s#\[user\]#$user#g" -e "s#\[password\]#$password#g" -e "s#\[database\]#$database#g" .env
+        /bin/sed -i "s#\[user\]#$user#g" .env
+        /bin/sed -i "s#\[password\]#$password#g" .env
+        /bin/sed -i "s#\[database\]#$database#g" .env
         npm install
         echo
         echo "✔ apollo modules installed successfully!"
