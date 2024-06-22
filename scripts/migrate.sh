@@ -8,3 +8,7 @@ cp -f ./zeus/prisma/schema.prisma ./apollo/prisma/
 
 cd apollo
 npm run gen
+
+echo
+echo "✔ database migrated successfully!"
+echo

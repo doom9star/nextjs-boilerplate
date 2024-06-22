@@ -2,14 +2,19 @@
 
 ## INSTRUCTIONS
 
-- git clone https://github.com/doom9star/nextjs-boilerplate.git
-- ./scripts/setup.sh
-- **scripts/vsc.sh** (replace [user], [password], [database])
-- **zeus/.env** (replace [user], [password], [database] in DATABASE_URL & fill)
-- **apollo/.env** (replace [user], [password], [database] in DATABASE_URL & fill)
-- ./scripts/migrate.sh (run initially & whenever you modify **zeus/prisma/schema.prisma**)
-- ctrl + shift + p -> Tasks: Run Task -> setup (start)
-- ctrl + shift + p -> Tasks: Terminate Task -> setup (stop)
+- clone repository
+  - git clone https://github.com/doom9star/nextjs-boilerplate.git
+- run setup
+  - ./scripts/setup.sh
+- fill environment variables
+  - zeus/.env
+  - apollo/.env
+- run whenever you modify **zeus/schema.prisma**
+  - ./scripts/migrate.sh
+- start tasks
+  - ctrl + shift + p -> Tasks: Run Task -> setup
+- stop tasks
+  - ctrl + shift + p -> Tasks: Terminate Task -> setup
 
 ## STACK
 

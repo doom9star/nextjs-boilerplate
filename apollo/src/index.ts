@@ -25,6 +25,9 @@ async function main() {
     }
   );
 
+  // remove "queue.add" method and uncomment below to remove BACKUP job
+  // await queue.removeRepeatable(BACKUP, { pattern: "0 0 0 * * *" });
+
   const app = express();
   app.use(cors({ origin: process.env.ZEUS, credentials: true }));
   app.use("/", RERouter);
