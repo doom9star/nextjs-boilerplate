@@ -46,9 +46,6 @@ if command -v psql &> /dev/null; then
 
         cd ../
         source scripts/migrate.sh
-        echo
-        echo "✔ database migrated successfully!"
-        echo
 
         rm -rf .git
         git init
