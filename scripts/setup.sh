@@ -7,6 +7,15 @@ if command -v psql &> /dev/null; then
         echo "✔ redis"
         echo
 
+        echo "repository setup"
+        read -p "url: " url
+        rm -rf .git
+        git init
+        git remote add origin "$url"
+        echo
+        echo "✔ repository initialized successfully!"
+        echo
+
         echo "database setup"
         read -p "user: " user
         read -p "password: " password
@@ -47,16 +56,9 @@ if command -v psql &> /dev/null; then
         cd ../
         source scripts/migrate.sh
 
-        echo "repository setup"
-        read -p "url: " url
-        rm -rf .git
-        git init
-        git remote add origin url
         git add .
         git commit -m "inital commit!"
 
-        echo
-        echo "✔ repository initialized successfully!"
         echo
         echo "✔ setup completed successfully!"
     else
