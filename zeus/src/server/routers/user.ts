@@ -114,4 +114,44 @@ export const userRouter = router({
         };
       }
     }),
+
+  detail: privateProcedure
+    .input(
+      z.object({
+        name: z.string(),
+      })
+    )
+    .query(async (opts) => {
+      try {
+        const user = await prisma.user.findUnique({
+          where: { name: opts.input.name },
+          include: {
+            avatar: true,
+          },
+        });
+
+        if (!user) {
+          return {
+            status: 404,
+            message: "USER_DETAIL",
+            description: "user not found!",
+            data: null,
+          };
+        }
+
+        return {
+          status: 200,
+          message: "USER_DETAIL",
+          description: "user retrieved successfully!",
+          data: user,
+        };
+      } catch {
+        return {
+          status: 500,
+          message: "USER_DETAIL",
+          description: "something wrong has happened, please try again!",
+          data: null,
+        };
+      }
+    }),
 });

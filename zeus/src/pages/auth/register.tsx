@@ -34,7 +34,7 @@ export default function Register() {
     mutateAsync(rinfo)
       .then((data) => {
         if (data.status === 200) {
-          dispatch(setUser(data.data?.user));
+          dispatch(setUser(data.data as any));
           router.replace("/home");
         } else handler(data);
       })

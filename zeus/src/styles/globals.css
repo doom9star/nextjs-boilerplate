@@ -8,3 +8,81 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+.ant-form-item-explain-error {
+  font-size: 0.6rem;
+  margin-top: 0.1rem;
+}
+
+.ant-alert-message {
+  font-weight: bold;
+  font-size: 0.9rem !important;
+}
+
+.ant-steps-item-title {
+  font-size: 0.8rem !important;
+}
+
+.ant-modal-title {
+  font-size: 0.8rem !important;
+}
+
+.ant-card-meta-description {
+  font-size: 0.7rem;
+  color: black !important;
+}
+
+.ant-card-meta-title {
+  margin-bottom: 0px !important;
+}
+
+.ant-menu-title-content {
+  font-size: 0.8rem;
+}
+
+.ant-dropdown-menu-title-content {
+  font-size: 0.7rem;
+}
+
+.ant-image-mask-info {
+  font-size: 0.5rem;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.ant-tabs-tab-btn {
+  font-size: 0.7rem;
+}
+
+.ant-steps-item-description {
+  font-size: 0.7rem !important;
+}
+
+.gm-style iframe + div {
+  border: none !important;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-prev:focus {
+  font-size: inherit;
+  left: 50px;
+  z-index: 2;
+  color: gray;
+}
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:hover,
+.ant-carousel .slick-next:focus {
+  font-size: inherit;
+  right: 50px;
+  z-index: 2;
+  color: gray;
+}
