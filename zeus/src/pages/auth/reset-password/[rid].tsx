@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 import { useRouter } from "next/router";
 import { useCallback, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
+import { IoMdArrowBack } from "react-icons/io";
 import { IoLockClosedOutline } from "react-icons/io5";
 
 export default function ResetPassword() {
@@ -53,6 +54,10 @@ export default function ResetPassword() {
 
   return (
     <div className="w-full h-full flex flex-col justify-center lg:w-3/4 mx-auto">
+      <IoMdArrowBack
+        className="text-gray-600 mb-4 cursor-pointer"
+        onClick={() => router.back()}
+      />
       <Typography.Title level={4} className="flex items-center py-8">
         <IoLockClosedOutline className="mr-2" /> Reset Password
       </Typography.Title>

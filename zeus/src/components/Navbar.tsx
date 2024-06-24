@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { useCallback, useMemo, useState } from "react";
 import { AiOutlineLogout, AiOutlineUser } from "react-icons/ai";
 import { CgFeed } from "react-icons/cg";
+import { FaCog } from "react-icons/fa";
 
 export default function Navbar() {
   const router = useRouter();
@@ -27,7 +28,10 @@ export default function Navbar() {
   const { handler } = useError();
 
   const navItems: MenuProps["items"] = useMemo(() => {
-    const items = [{ key: "feed", label: "Feed", icon: <CgFeed /> }];
+    const items = [
+      { key: "feed", label: "Feed", icon: <CgFeed /> },
+      { key: "settings", label: "Settings", icon: <FaCog /> },
+    ];
 
     return items;
   }, [current]);
